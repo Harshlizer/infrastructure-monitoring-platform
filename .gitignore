@@ -1,0 +1,11 @@
+# Local tooling
+.vs/
+.vscode/
+
+# PowerShell
+*.ps1xml
+
+# OS files
+Thumbs.db
+Desktop.ini
+
