@@ -97,7 +97,7 @@ try {
             SELECT UserId FROM dim.[User] WHERE UPN = @UPN
 "@
         $getUserCmd = New-Object System.Data.SqlClient.SqlCommand($getUserQuery, $connection)
-        $getUserCmd.Parameters.AddWithValue("@UPN", "$user@aventusgroup.local") | Out-Null
+        $getUserCmd.Parameters.AddWithValue("@UPN", "$user@internal.example") | Out-Null
         $userIdObj = $getUserCmd.ExecuteScalar()
         
         if ($userIdObj) {
@@ -110,7 +110,7 @@ try {
                 VALUES (@UPN, @DisplayName, GETUTCDATE())
 "@
             $insertUserCmd = New-Object System.Data.SqlClient.SqlCommand($insertUserQuery, $connection)
-            $insertUserCmd.Parameters.AddWithValue("@UPN", "$user@aventusgroup.local") | Out-Null
+            $insertUserCmd.Parameters.AddWithValue("@UPN", "$user@internal.example") | Out-Null
             $insertUserCmd.Parameters.AddWithValue("@DisplayName", $user) | Out-Null
             $userId = [int]$insertUserCmd.ExecuteScalar()
             Write-Host "Sanitized status message" -ForegroundColor Green

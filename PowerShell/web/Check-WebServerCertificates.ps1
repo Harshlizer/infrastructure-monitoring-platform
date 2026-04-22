@@ -10,20 +10,20 @@ param(
 
 $webSites = @(
     @{
-        Name = "Sanitized status message"
-        Url = "https://1c.nadodeneg.ru/"
+        Name = "Public Application Endpoint"
+        Url = "https://app.example.com/"
     },
     @{
-        Name = "Sanitized status message"
-        Url = "https://1c.finmodel.ru/"
+        Name = "Reporting Portal Endpoint"
+        Url = "https://reports.example.com/"
     },
     @{
-        Name = "Sanitized status message"
+        Name = "Internal Service Endpoint"
         Url = "https://<INTERNAL_ENDPOINT>/"
     },
     @{
-        Name = "Sanitized status message"
-        Url = "https://ms.aventusgroup.local:8443/"
+        Name = "Internal Management Endpoint"
+        Url = "https://mgmt.internal.example:8443/"
     }
 )
 
