@@ -68,6 +68,14 @@ SQL Server Monitoring Database
 Dashboard / Reporting Layer
 ```
 
+## Interface Preview
+
+![Monitoring overview](Docs/assets/dashboard-overview.svg)
+
+![Certificate monitoring view](Docs/assets/dashboard-certificates.svg)
+
+![M365 analytics view](Docs/assets/dashboard-licenses.svg)
+
 ## Core Design
 
 The platform is built around a modular collector model:
