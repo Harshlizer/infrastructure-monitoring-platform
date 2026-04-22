@@ -8,9 +8,7 @@ This project combines PowerShell collectors, SQL Server storage, scheduled autom
 
 ## Why This Project Matters
 
-This repository is presented as a standalone showcase project for infrastructure, systems, and automation roles.
-
-It demonstrates:
+This repository demonstrates:
 
 - end-to-end monitoring design
 - practical PowerShell automation at enterprise scale
@@ -127,6 +125,7 @@ Designed and implemented the monitoring architecture, PowerShell collector appro
 ```text
 /PowerShell
 /SQL
+/Dashboard
 /Docs
 README.md
 ```
@@ -149,11 +148,15 @@ README.md
 - `SQL/queries` for operational validation queries
 - `SQL/maintenance` for cleanup and lifecycle tasks
 
+### Dashboard Layout
+
+- `Dashboard/InfrastructureMonitoringDashboard` for the sanitized .NET dashboard source, API layer, and static frontend assets
+
 ## Project Status
 
 Actively developed and extended with new collectors, SQL migrations, and reporting improvements.
 
-## Recruiter-Friendly Positioning
+## Role Alignment
 
 This project is a strong fit for profiles focused on:
 
