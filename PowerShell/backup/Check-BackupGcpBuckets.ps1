@@ -14,70 +14,70 @@ $serverConfigs = @(
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "acredit"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "onecredit"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "credit365"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "creditplus"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "findom"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "ecommoney"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "beeclever"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "eco_creditline"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "1c-ua"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     },
     @{
         ServerName = "<SERVER_NAME>"
         ServerIp = "<INTERNAL_IP>"
-        ProjectName = "1c-ua"
+        ProjectName = "ProjectName"
         GcpProjectId = "<SERVER_NAME>"
         CredentialsPath = "<SERVICE_ACCOUNT_KEY_DIRECTORY>\\<SERVER_NAME>.json"
     }
