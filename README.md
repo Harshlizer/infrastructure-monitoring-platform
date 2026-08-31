@@ -101,13 +101,13 @@ Dashboard / Reporting Layer
 ![M365 analytics view](Docs/assets/dashboard-licenses.svg)
 
 
-![Anonymized SQL database monitoring view](Docs/assets/sql-database-monitoring.jpg)
+![Anonymized SQL database monitoring view](Docs/assets/sql-database-monitoring-v2.jpg)
 
-![Anonymized license optimization view](Docs/assets/license-optimization.jpg)
+![Anonymized license optimization view](Docs/assets/license-optimization-v2.jpg)
 
-![Anonymized Microsoft 365 application permissions view](Docs/assets/m365-app-permissions.jpg)
+![Anonymized Microsoft 365 application permissions view](Docs/assets/m365-app-permissions-v2.jpg)
 
-![Anonymized certificate monitoring view](Docs/assets/certificate-monitoring.jpg)
+![Anonymized certificate monitoring view](Docs/assets/certificate-monitoring-v2.jpg)
 
 ## Core Design
 
