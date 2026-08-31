@@ -16,11 +16,7 @@ $ClientSecret = "<CLIENT_SECRET>"
 
 $today = Get-Date
 $thresholdDate = $today.AddDays(-$InactiveDaysThreshold)
-$excludeKeywords = @('info','inform','kz_','support','powerautomate','ro_','powerbi','ph_','marketing',
-'ua_','external','itsupport','noreply','promo','scan','collection','office',
-'no-reply','help','cs7','docsarchive','vercall','hello','quejas','complaints','accounting',
-'judiciar','cumplimiento','test-doc','legal','cs5','cs4','cs3','cs2','cs1',
-'hq-room-2nd','recovery','ceo','testreply','soporte','dev','cs6','accounts','doc'
+$excludeKeywords = @('exclude1','exclude2'
 )
 
 $productPrices = @{
