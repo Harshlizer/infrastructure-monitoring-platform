@@ -1,0 +1,74 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#050816"/>
+  <rect x="24" y="20" width="1552" height="64" rx="18" fill="#0A1022" stroke="#1B2540"/>
+  <circle cx="56" cy="52" r="8" fill="#4EC97A"/>
+  <text x="78" y="49" fill="#F3F6FF" font-size="24" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Infrastructure Monitoring Platform</text>
+  <text x="78" y="70" fill="#8FA1C7" font-size="13" font-family="Segoe UI, Arial, sans-serif">M365 analytics view • department cost monitoring and inactive user analysis</text>
+
+  <rect x="24" y="104" width="1552" height="342" rx="18" fill="#091022" stroke="#182543"/>
+  <text x="44" y="138" fill="#F3F6FF" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700">License Cost by Department</text>
+  <text x="44" y="162" fill="#8699C5" font-size="13" font-family="Segoe UI, Arial, sans-serif">Sample department-level analytics with highlighted active license families</text>
+  <rect x="40" y="184" width="1520" height="34" rx="10" fill="#161D35"/>
+  <text x="58" y="206" fill="#93A4CA" font-size="13" font-family="Segoe UI, Arial, sans-serif">Search by department...</text>
+
+  <g font-family="Consolas, monospace" font-size="13" fill="#8CA0CC">
+    <text x="48" y="252">DEPARTMENT</text><text x="348" y="252">TOTAL COST</text><text x="470" y="252">ENTERPRISEPACK</text><text x="686" y="252">M365_F1_COMM</text><text x="906" y="252">O365_BUSINESS</text><text x="1122" y="252">POWER_BI_PRO</text><text x="1320" y="252">STANDARDPACK</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15">
+    <text x="48" y="290" fill="#EAF0FF">Infrastructure</text><text x="350" y="290" fill="#EAF0FF">1749.43 €</text>
+    <rect x="470" y="270" width="180" height="28" rx="6" fill="#49B92B"/><text x="554" y="289" fill="#F8FFF7">30</text>
+    <rect x="686" y="270" width="180" height="28" rx="6" fill="#49B92B"/><text x="770" y="289" fill="#F8FFF7">82</text>
+    <rect x="906" y="270" width="180" height="28" rx="6" fill="#49B92B"/><text x="990" y="289" fill="#F8FFF7">12</text>
+    <rect x="1122" y="270" width="180" height="28" rx="6" fill="#49B92B"/><text x="1206" y="289" fill="#F8FFF7">19</text>
+    <rect x="1320" y="270" width="180" height="28" rx="6" fill="#49B92B"/><text x="1404" y="289" fill="#F8FFF7">12</text>
+
+    <text x="48" y="328" fill="#EAF0FF">Operations</text><text x="350" y="328" fill="#EAF0FF">1679.71 €</text>
+    <rect x="470" y="308" width="180" height="28" rx="6" fill="#49B92B"/><text x="554" y="327" fill="#F8FFF7">39</text>
+    <rect x="686" y="308" width="180" height="28" rx="6" fill="#49B92B"/><text x="770" y="327" fill="#F8FFF7">28</text>
+    <rect x="906" y="308" width="180" height="28" rx="6" fill="#49B92B"/><text x="990" y="327" fill="#F8FFF7">9</text>
+    <rect x="1122" y="308" width="180" height="28" rx="6" fill="#49B92B"/><text x="1206" y="327" fill="#F8FFF7">17</text>
+    <rect x="1320" y="308" width="180" height="28" rx="6" fill="#49B92B"/><text x="1404" y="327" fill="#F8FFF7">10</text>
+
+    <text x="48" y="366" fill="#EAF0FF">Customer Support</text><text x="350" y="366" fill="#EAF0FF">1053.45 €</text>
+    <rect x="470" y="346" width="180" height="28" rx="6" fill="#49B92B"/><text x="554" y="365" fill="#F8FFF7">17</text>
+    <rect x="686" y="346" width="180" height="28" rx="6" fill="#49B92B"/><text x="770" y="365" fill="#F8FFF7">25</text>
+    <rect x="906" y="346" width="180" height="28" rx="6" fill="#49B92B"/><text x="990" y="365" fill="#F8FFF7">5</text>
+    <rect x="1122" y="346" width="180" height="28" rx="6" fill="#49B92B"/><text x="1206" y="365" fill="#F8FFF7">22</text>
+    <rect x="1320" y="346" width="180" height="28" rx="6" fill="#49B92B"/><text x="1404" y="365" fill="#F8FFF7">9</text>
+
+    <text x="48" y="404" fill="#EAF0FF">Finance</text><text x="350" y="404" fill="#EAF0FF">984.15 €</text>
+    <rect x="470" y="384" width="180" height="28" rx="6" fill="#49B92B"/><text x="554" y="403" fill="#F8FFF7">21</text>
+    <rect x="686" y="384" width="180" height="28" rx="6" fill="#49B92B"/><text x="770" y="403" fill="#F8FFF7">17</text>
+    <rect x="906" y="384" width="180" height="28" rx="6" fill="#49B92B"/><text x="990" y="403" fill="#F8FFF7">4</text>
+    <rect x="1122" y="384" width="180" height="28" rx="6" fill="#49B92B"/><text x="1206" y="403" fill="#F8FFF7">19</text>
+    <rect x="1320" y="384" width="180" height="28" rx="6" fill="#49B92B"/><text x="1404" y="403" fill="#F8FFF7">4</text>
+  </g>
+
+  <text x="1358" y="426" fill="#F3F6FF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Total cost: 32951.05 €</text>
+
+  <rect x="24" y="470" width="1552" height="390" rx="18" fill="#091022" stroke="#182543"/>
+  <text x="44" y="504" fill="#F3F6FF" font-size="22" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Inactive Licensed Users (30+ days)</text>
+  <text x="44" y="528" fill="#8699C5" font-size="13" font-family="Segoe UI, Arial, sans-serif">Anonymized activity data with aging buckets and monthly cost exposure</text>
+  <g font-family="Consolas, monospace" font-size="13" fill="#8CA0CC">
+    <text x="48" y="572">DISPLAY NAME</text><text x="320" y="572">USER PRINCIPAL NAME</text><text x="632" y="572">LAST ACTIVITY</text><text x="862" y="572">DAYS INACTIVE</text><text x="1014" y="572">LICENSES</text><text x="1430" y="572">MONTHLY COST</text>
+  </g>
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="15">
+    <text x="48" y="614" fill="#EAF0FF">Sample User A</text><text x="320" y="614" fill="#EAF0FF">user.a@internal.example</text><text x="632" y="614" fill="#BFCBE6">2025-11-11 13:44:14</text>
+    <rect x="862" y="592" width="140" height="28" rx="6" fill="#E85748"/><text x="915" y="611" fill="#FFF7F6">151</text>
+    <text x="1014" y="614" fill="#EAF0FF">M365_F1_COMM (2.34 €)</text><text x="1430" y="614" fill="#EAF0FF">2.34 €</text>
+
+    <text x="48" y="654" fill="#EAF0FF">Sample User B</text><text x="320" y="654" fill="#EAF0FF">user.b@internal.example</text><text x="632" y="654" fill="#BFCBE6">2025-12-21 11:27:31</text>
+    <rect x="862" y="632" width="140" height="28" rx="6" fill="#E85748"/><text x="915" y="651" fill="#FFF7F6">138</text>
+    <text x="1014" y="654" fill="#EAF0FF">M365_F1_COMM (2.34 €)</text><text x="1430" y="654" fill="#EAF0FF">2.34 €</text>
+
+    <text x="48" y="694" fill="#EAF0FF">Sample User C</text><text x="320" y="694" fill="#EAF0FF">user.c@internal.example</text><text x="632" y="694" fill="#BFCBE6">2026-01-04 15:50:18</text>
+    <rect x="862" y="672" width="140" height="28" rx="6" fill="#F08A24"/><text x="920" y="691" fill="#FFF9F2">83</text>
+    <text x="1014" y="694" fill="#EAF0FF">POWER_BI_PRO (8.05 €)</text><text x="1430" y="694" fill="#EAF0FF">8.05 €</text>
+
+    <text x="48" y="734" fill="#EAF0FF">Sample User D</text><text x="320" y="734" fill="#EAF0FF">user.d@internal.example</text><text x="632" y="734" fill="#BFCBE6">2026-01-28 11:11:59</text>
+    <rect x="862" y="712" width="140" height="28" rx="6" fill="#F08A24"/><text x="920" y="731" fill="#FFF9F2">81</text>
+    <text x="1014" y="734" fill="#EAF0FF">M365_F1_COMM (2.34 €)</text><text x="1430" y="734" fill="#EAF0FF">2.34 €</text>
+  </g>
+
+  <text x="1394" y="840" fill="#F3F6FF" font-size="18" font-family="Segoe UI, Arial, sans-serif" font-weight="700">Total cost: 694.27 €</text>
+</svg>
