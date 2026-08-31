@@ -1,194 +1,124 @@
 # Infrastructure Monitoring Platform
 
-## Project Summary
+A PowerShell, SQL Server, and .NET monitoring platform for centralized infrastructure operations. It collects operational and security telemetry from Windows, Active Directory, DNS, SQL Server, Microsoft 365, web endpoints, and cloud backup storage, then presents the results in a single dashboard.
 
-Custom-built enterprise monitoring platform designed to centralize infrastructure visibility, automate health checks, and improve proactive issue detection across distributed environments.
+All screenshots and examples in this repository are anonymized. They contain no production hostnames, IP addresses, domains, tenant data, user identities, or credentials.
 
-This project combines PowerShell collectors, SQL Server storage, scheduled automation, and reporting workflows into a single monitoring solution covering infrastructure, identity, security, Microsoft 365, certificates, and backup validation.
+## What It Solves
 
-## Why This Project Matters
-
-This repository demonstrates:
-
-- end-to-end monitoring design
-- practical PowerShell automation at enterprise scale
-- SQL-backed analytics and reporting structure
-- cross-domain monitoring across AD, DNS, servers, Microsoft 365, and backups
-- business-focused operational engineering
-
-## Key Highlights
-
-- built a modular PowerShell-based monitoring platform
-- centralized infrastructure telemetry into SQL Server
-- designed fact and dimension style storage for analytics-ready reporting
-- automated recurring checks through Task Scheduler
-- covered both operational and security monitoring scenarios
-- created a scalable foundation for future collectors and dashboard expansion
-
-## Monitoring Scope
-
-### Active Directory
-
-- user and group changes
-- insecure LDAP authentication events
-- AD and LDAPS certificate expiration
-- Group Policy change tracking
-
-### DNS
-
-- DNS zone changes
-- DNS record changes
-
-### Server Health
-
-- reboot tracking
-- firewall status
-- installed software inventory
-
-### Microsoft 365
-
-- inactive users
-- license cost analytics by department
-
-### Backup Validation
-
-- cloud storage backup checks
-
-### Web and TLS
-
-- web server certificate validation
+- Gives infrastructure teams one place to review service health, changes, risk signals, and historical trends.
+- Replaces repetitive manual checks across SQL Server, Microsoft 365, certificates, directory services, DNS, and backup storage.
+- Detects common issues before they become incidents: expiring credentials, insufficient disk space, missing backups, unused or oversized licenses, failed SQL Agent jobs, and unexpected configuration changes.
+- Keeps collection modular: new checks can be introduced as PowerShell collectors without redesigning the portal.
 
 ## Architecture
 
 ```text
-PowerShell Collectors
-        ↓
-SQL Server Monitoring Database
-        ↓
-Dashboard / Reporting Layer
+PowerShell collectors + Microsoft Graph API + SQL Server system views
+                              |
+                              v
+                    Central SQL Server Monitoring DB
+                     fact / dimension-oriented schema
+                              |
+                              v
+                   .NET API and responsive web dashboard
 ```
 
-## Interface Preview
+Collectors run through Windows Task Scheduler and use least-privilege SQL logins where possible. The dashboard exposes current state, filters, alerts, drill-downs, and historical data.
 
-![Monitoring overview](Docs/assets/dashboard-overview.svg)
+## Monitoring Modules
 
-![Certificate monitoring view](Docs/assets/dashboard-certificates.svg)
+### SQL Server and Databases
 
-![M365 analytics view](Docs/assets/dashboard-licenses.svg)
+- SQL Agent availability and backup job status.
+- Grouped SQL instance inventory with filters for `1C RU`, `1C UA`, `DWH`, and `Kontakt` environments.
+- Database status, size, data/log allocation, recovery model, compatibility level, and last full backup.
+- File-level volume, free-space, autogrowth, and data/log details.
+- Low-space, offline database, failed collection, and backup-related signals.
+- Database-size history showing data and log growth over time.
 
-## Core Design
+![Anonymized SQL database monitoring view](Docs/assets/sql-database-monitoring.jpg)
 
-The platform is built around a modular collector model:
+### Microsoft 365 License Analytics and Optimization
 
-- PowerShell scripts collect infrastructure and service data
-- data is written into a centralized SQL Server database
-- fact and dimension tables provide analytics-ready structure
-- Task Scheduler jobs ensure automated and continuous execution
-- reporting and dashboard layers enable historical analysis and visibility
+- License allocation and monthly cost analysis by department.
+- Inactive-user reporting with creation date and exclusion lists for service accounts.
+- 180-day activity assessment across Exchange, Teams, OneDrive, SharePoint, and desktop activity.
+- Recommendations for license downgrade or removal, with estimated monthly savings and confidence level.
+- License catalog and price management for the supported Microsoft 365 products.
 
-## Technology Stack
+![Anonymized license optimization view](Docs/assets/license-optimization.jpg)
+
+### Microsoft 365 Application Governance
+
+- Inventory of third-party enterprise applications with delegated and tenant-wide permissions.
+- Grouped view of application, resource, permission scope, consent type, and affected users.
+- Resource-aware presentation for Outlook, Calendar, Contacts, OneDrive, SharePoint, Teams, and other Microsoft Graph services.
+- Filtering of Microsoft first-party and approved internal applications to focus reviews on external risk.
+- Monitoring of Entra application secrets and certificates, including expiry and expired credentials.
+
+![Anonymized Microsoft 365 application permissions view](Docs/assets/m365-app-permissions.jpg)
+
+### Certificate Monitoring
+
+- Entra application secret and certificate expiry.
+- AD and LDAPS certificate status on directory controllers.
+- TLS certificate checks for internal and external web services.
+- Visual risk levels for expiring and expired credentials.
+
+![Anonymized certificate monitoring view](Docs/assets/certificate-monitoring.jpg)
+
+### Directory, DNS, Server, and Backup Monitoring
+
+- Active Directory user and group changes.
+- Group Policy change tracking and insecure LDAP authentication events.
+- DNS zone and record change tracking.
+- Server reboot history, firewall status, and installed software inventory.
+- Cloud-storage backup validation.
+
+## Core Technology
 
 - PowerShell
 - SQL Server
-- Windows Server
-- Active Directory
-- Microsoft Graph API
-- Task Scheduler
+- .NET web API and frontend
+- Microsoft Graph PowerShell SDK
+- Windows Server, Active Directory, DNS, IIS
+- Windows Task Scheduler
 - Cloud storage REST APIs
-- .NET / web dashboard layer
 
-## Capabilities
-
-- centralized infrastructure visibility
-- proactive issue detection
-- historical analytics
-- security event monitoring
-- license and cost reporting
-- backup validation
-- automation-first operations
-
-## Example Operational Scenarios
-
-- detect expiring AD and LDAPS certificates before service impact
-- identify insecure LDAP usage in domain environments
-- track DNS changes for audit and troubleshooting
-- monitor server reboot causes and patterns
-- analyze Microsoft 365 license allocation and cost by department
-- validate SQL backup presence in cloud storage buckets
-
-## Business Value
-
-- reduced manual monitoring effort
-- improved incident response time
-- better operational visibility
-- stronger security and compliance awareness
-- scalable foundation for future monitoring expansion
-
-## My Role
-
-Designed and implemented the monitoring architecture, PowerShell collector approach, SQL-backed data model, and automation workflows for centralized infrastructure monitoring and analytics.
-
-## Repository Structure
+## Repository Layout
 
 ```text
-/PowerShell
-/SQL
-/Dashboard
-/Docs
+/PowerShell          # Collectors and operational scripts
+/SQL                 # Schema, migrations, permissions, and queries
+/Dashboard            # Sanitized .NET API and dashboard source
+/Docs/assets          # Anonymized documentation screenshots
 README.md
 ```
 
-### PowerShell Layout
+## Operational Model
 
-- `PowerShell/active-directory` for AD change tracking, certificate checks, LDAP event collection, and Group Policy monitoring
-- `PowerShell/dns` for DNS change collection
-- `PowerShell/server-health` for firewall, reboot, and software inventory monitoring
-- `PowerShell/microsoft365` for inactive user reporting and license cost analytics
-- `PowerShell/backup` for cloud backup validation workflows
-- `PowerShell/web` for web and TLS certificate checks
-- `PowerShell/utilities` for helper and diagnostic automation
+1. A collector connects to its source system using scoped credentials.
+2. It normalizes the result and stores it in the central SQL Server monitoring database.
+3. The dashboard reads the latest state and historical snapshots through its .NET API.
+4. Operators filter, investigate alerts, and open per-resource detail views.
 
-### SQL Layout
+## Example Use Cases
 
-- `SQL/schema` for table creation scripts
-- `SQL/migrations` for schema evolution and data model adjustments
-- `SQL/permissions` for collector access and least-privilege setup
-- `SQL/queries` for operational validation queries
-- `SQL/maintenance` for cleanup and lifecycle tasks
-
-### Dashboard Layout
-
-- `Dashboard/InfrastructureMonitoringDashboard` for the sanitized .NET dashboard source, API layer, and static frontend assets
+- Find a database whose data volume is growing unexpectedly or whose disk has limited free capacity.
+- Identify a SQL Server instance with a failed SQL Agent backup job.
+- Review third-party applications that have `Files.ReadWrite.All`, mail, calendar, Teams, or SharePoint access.
+- Renew an Entra application secret or TLS certificate before expiration.
+- Review inactive or underused Microsoft 365 licenses and estimate the potential saving before changing assignments.
+- Audit directory, DNS, Group Policy, and reboot activity during an incident investigation.
 
 ## Project Status
 
-Actively developed and extended with new collectors, SQL migrations, and reporting improvements.
-
-## Role Alignment
-
-This project is a strong fit for profiles focused on:
-
-- Infrastructure Engineering
-- Systems Engineering
-- PowerShell Automation
-- Microsoft 365 Administration
-- Platform Operations
-- Monitoring and Observability
-
-## GitHub About
-
-```text
-Custom infrastructure monitoring platform built with PowerShell, SQL Server, and automation for AD, DNS, certificates, M365, backups, and server health.
-```
-
-## Suggested GitHub Topics
-
-```text
-powershell, sql-server, monitoring, infrastructure, active-directory, dns, microsoft365, automation, windows-server
-```
+Actively developed. The platform continues to grow through additional collectors, SQL migrations, dashboard improvements, and automation hardening.
 
 ## Author
 
 Denys Hrytsai  
 Infrastructure / Systems Engineer  
-Azure • Microsoft 365 • PowerShell • SQL Server • Automation
+Azure, Microsoft 365, PowerShell, SQL Server, Automation
+
